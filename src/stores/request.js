@@ -40,9 +40,11 @@ export const usePokemonStore = defineStore({
           }
           const iterator =  this.proxi[i]
           this.pokemons.push(Object.assign(iterator,type,id,img))
-
-          
         })
+      }
+      const inicial = this.pokemons.slice(0,100)
+      for(let i = 0;i<inicial.length;i++){
+        this.pokemonsPaginados.push(inicial[i])
       }
     },
     pagination(noPagina){

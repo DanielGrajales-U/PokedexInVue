@@ -1,9 +1,22 @@
 body{
     background-color: #5057;
     font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: #0004;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #505;
+    border-radius: 15px;
 }
 
 .nav-bar{
+    width: 100%;
     background-color: #5059;
     display: flex;
     border-radius: 15px 0;
@@ -12,13 +25,51 @@ body{
     justify-content: center;
 }
 .nav-bar img{
-    width: 100px;
+    width: 90px;
 }
 
 .pokemons{
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
+}
+
+.ld{
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position:absolute;
+}
+  
+.load{
+    border: 15px solid rgb(115, 83, 83);
+    border-top-color:#505;
+    border-top-style: groove;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  
+    position:absolute;
+    top:0;
+    
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+  
+}
+  
+.loading label{
+    color:#505;
+    top:55%;
+    text-align:center
+}
+  
+  
+@keyframes girar {
+    from{transform: rotate(0deg);}
+    to{transform:rotate(360deg);}
+  
 }
 
 .cards{
@@ -68,10 +119,13 @@ body{
 
 .navigation{
     display: block;
+    width: 90%;
 }
 
 .navigation .pagination{
     display: flex;
+    width: 80%;
+    flex-wrap: wrap;
 }
 
 .navigation li{
